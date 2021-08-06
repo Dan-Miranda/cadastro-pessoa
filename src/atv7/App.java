@@ -9,7 +9,9 @@ public class App {
 
 		var menu = 0;
 		var input = new Scanner(System.in);
+
         var pessoaFisicaController = new PessoaFisicaController();
+		var pessoaJuridicaController = new PessoaJuridicaController();
 
 		do {
 			System.out.println("Digite o valor de uma das açõees a seguir:\n");
@@ -25,7 +27,7 @@ public class App {
 					pessoaFisicaController.menu();
 					break;
 				case 2:
-
+					pessoaJuridicaController.menu();
 					break;
 				default:
 					System.out.println("\nOpção inválida!\n");
