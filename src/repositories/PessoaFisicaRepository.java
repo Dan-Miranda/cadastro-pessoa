@@ -44,6 +44,7 @@ public class PessoaFisicaRepository {
 
 			while (resultSet.next()) {
 				var pessoaFisica = new PessoaFisica();
+
 				pessoaFisica.setId(resultSet.getLong("id"));
 				pessoaFisica.setNomeSocial(resultSet.getString("nomeSocial"));
                 pessoaFisica.setRazaoSocial(resultSet.getString("razaoSocial"));
@@ -59,10 +60,14 @@ public class PessoaFisicaRepository {
                 pessoaFisica.setCpf(resultSet.getString("cpf"));
                 pessoaFisica.setRg(resultSet.getString("rg"));
                 pessoaFisica.setDataNascimento(resultSet.getString("dataNascimento"));
+
 				pessoasFisicas.add(pessoaFisica);
 			}
+
 			conexaoController.desconectaBD(connection);
+            
 			return pessoasFisicas;
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 			return null;
