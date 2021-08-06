@@ -2,7 +2,7 @@ package classes;
 
 import java.util.Date;
 
-public class Funcionario {
+public class Funcionario extends PessoaFisica {
 	private long pessoaId;
 	private double salario;
 	private double comissao;
